@@ -1,0 +1,23 @@
+{
+  "name": "chess-front",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "build": "webpack",
+    "watch": "webpack --watch",
+    "start": "webpack serve --mode development --open"
+  },
+  "author": "mrdimk",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/cli": "7.24.7",
+    "@babel/core": "7.24.7",
+    "@babel/preset-env": "7.24.7",
+    "copy-webpack-plugin": "12.0.2",
+    "webpack": "5.92.1",
+    "webpack-cli": "5.1.4",
+    "webpack-dev-server": "5.0.4"
+  }
+}
