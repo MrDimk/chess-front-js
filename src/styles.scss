@@ -1,0 +1,290 @@
+$font-stack:    Helvetica, sans-serif;
+$primary-color: #555;
+$black-text: #333;
+$white-text: #fff;
+$bg-gradient-start: #90E7DC;
+$bg-gradient-end: #D9E9AE;
+
+
+// body {
+//   font-family: Arial, sans-serif;
+//   background: linear-gradient(to bottom, #299d35, #a3dbdb);
+//   height: 100vh;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+// }
+
+// .container {
+//   display: flex;
+//   width: 90%;
+//   height: 80%;
+//   background-color: #f0f0f0;
+//   border-radius: 10px;
+//   overflow: hidden;
+// }
+
+// .log {
+//   width: 20%;
+//   background-color: #d0d0d0;
+//   padding: 10px;
+//   overflow-y: auto;
+// }
+
+// .log p {
+//   margin-bottom: 10px;
+// }
+
+// .main {
+//   width: 60%;
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   background-color: #f0f0f0;
+// }
+
+// .menu {
+//   width: 100%;
+//   display: flex;
+//   justify-content: flex-end;
+//   padding: 10px;
+// }
+
+// .menu-button {
+//   background: none;
+//   border: none;
+//   font-size: 24px;
+//   cursor: pointer;
+// }
+
+// .board {
+//   width: 80%;
+//   height: 80%;
+//   background-color: #a0c0a0;
+//   display: grid;
+//   grid-template-columns: repeat(8, 1fr);
+//   grid-template-rows: repeat(8, 1fr);
+//   gap: 1px;
+// }
+
+// .board div {
+//   background-color: #f0fff0;
+// }
+
+// .board div:nth-child(even) {
+//   background-color: #90b090;
+// }
+
+// .chat {
+//   width: 20%;
+//   background-color: #d0d0d0;
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: space-between;
+// }
+
+// .player-info {
+//   display: flex;
+//   align-items: center;
+//   padding: 10px;
+// }
+
+// .player-avatar {
+//   width: 40px;
+//   height: 40px;
+//   border-radius: 50%;
+//   margin-right: 10px;
+// }
+
+// .player-name {
+//   font-weight: bold;
+// }
+
+// .chat-messages {
+//   flex-grow: 1;
+//   padding: 10px;
+//   overflow-y: auto;
+// }
+
+// .chat-input {
+//   display: flex;
+//   padding: 10px;
+//   border-top: 1px solid #c0c0c0;
+// }
+
+// .chat-input input {
+//   flex-grow: 1;
+//   padding: 5px;
+//   border: 1px solid #c0c0c0;
+//   border-radius: 5px;
+// }
+
+// .send-button {
+//   background: none;
+//   border: none;
+//   font-size: 24px;
+//   margin-left: 10px;
+//   cursor: pointer;
+//   color: #4caf50;
+// }
+
+.app-window {
+  display: flex;
+  width: 1000px;
+  height: 500px;
+  flex-shrink: 0;
+
+  border: 1px solid #C4C4C4;
+  background: #E6E6E6;
+}
+
+.chat-block {
+}
+
+.chat {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  background: #D9D9D9;
+  width: 380px;
+}
+
+
+/////////////
+
+
+.game-block {
+  flex-grow: 1;
+}
+
+.game {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.chessboard {
+  display: grid;
+  grid-template-columns: 15px repeat(8, 1fr);
+  grid-template-rows: repeat(8, 1fr) 15px;
+
+  margin: 0;
+  padding: 0;
+  width: 350px;
+  height: 350px;
+
+  list-style: none;
+}
+
+.chessboard li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+
+  background-color: #CFFFEB;
+  font-size: 12px;
+
+  &.row-label {
+    padding-top: 12px;
+  }
+
+  &.column-label {
+    padding-top: 5px;
+  }
+}
+
+.chessboard li:nth-child(2n-1) {
+  background-color: #8FC3AA;
+}
+
+.chessboard li.chessboard-label {
+  background-color: rgba(0,0,0,0);
+  text-align: center;
+  vertical-align: middle;
+}
+
+.figure {
+  padding: 0;
+  margin: 0;
+  width: 80%;
+  height: 80%;
+
+  border-radius: 50%;
+
+  transition: background-color 0.2s ease 0.1s, box-shadow 0.1s ease 0.1s; /* Задержка в 100 мс (0.1s) перед анимацией */
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 5px 5px 10px rgba(51, 51, 51, 0.5);
+  }
+}
+
+//.pawn {
+//  background-image: url("/frontend/src/view/img/black-king.svg");
+//
+//  &.black  {
+//    background-color: black;
+//  }
+//
+//}
+
+
+////////////////////
+
+
+.log-block {
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+.log-list {
+  display: flex;
+  flex-direction: column;
+
+  margin: 0;
+  padding: 0;
+  background: #D9D9D9;
+  width: 160px;
+  height: 100%;
+
+  list-style: none;
+
+  & li {
+    display: flex;
+    padding: 0 5px;
+    margin: 0;
+
+    font-size: 12px;
+
+    & .log-timestamp {
+      margin: 0;
+      padding: 3px 0;
+      margin-right: 10px;
+    }
+
+    & .log-action {
+      margin: 0;
+      padding: 3px 0;
+    }
+  }
+}
+
+
+////////////
+
+
+body {
+  font: 100% $font-stack;
+  color: $primary-color;
+  background: linear-gradient(180deg, $bg-gradient-start 0%, $bg-gradient-end 100%);
+  width: 100%;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center; /* Horizontally center */
+  align-items: center; /* Vertically center */
+}
