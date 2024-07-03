@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 45 45">
+  <g fill-rule="evenodd" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5">
+    <path stroke-linecap="butt" d="M9 39h27v-3H9v3zm4-7 1-2h17l2 2H13zm-1 4v-4h21v4H12z"/>
+    <path stroke-linecap="butt" stroke-linejoin="miter" d="M14 30V17h17v13H14z"/>
+    <path stroke-linecap="butt" d="m14 17-3-3h23l-3 3H14zm-3-3V9h4v2h5V9h5v2h5V9h4v5H11z"/>
+    <path fill="none" stroke="#fff" stroke-linejoin="miter" stroke-width="1" d="M12 36h21m-20-4h19m-18-2h17M14 17h17m-20-3h23"/>
+  </g>
+</svg>

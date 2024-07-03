@@ -1,0 +1,53 @@
+.figure {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  &.white-king {
+    background-image: url(./images/pieces/white-king.svg);
+  }
+
+  &.black-king {
+    background-image: url(./images/pieces/black-king.svg);
+  }
+
+  &.white-queen {
+    background-image: url(./images/pieces/white-queen.svg);
+  }
+
+  &.black-queen {
+    background-image: url(./images/pieces/black-queen.svg);
+  }
+
+  &.white-rook {
+    background-image: url(./images/pieces/white-rook.svg);
+  }
+
+  &.black-rook {
+    background-image: url(./images/pieces/black-rook.svg);
+  }
+
+  &.white-bishop {
+    background-image: url(./images/pieces/white-bishop.svg);
+  }
+
+  &.black-bishop {
+    background-image: url(./images/pieces/black-bishop.svg);
+  }
+
+  &.white-knight {
+    background-image: url(./images/pieces/white-knight.svg);
+  }
+
+  &.black-knight {
+    background-image: url(./images/pieces/black-knight.svg);
+  }
+
+  &.white-pawn {
+    background-image: url(./images/pieces/white-pawn.svg);
+  }
+
+  &.black-pawn {
+    background-image: url(./images/pieces/black-pawn.svg);
+  }
+}

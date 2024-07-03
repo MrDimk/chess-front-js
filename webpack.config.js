@@ -1,17 +1,19 @@
 const path = require('path');
-const CopyPlugin = require('copy-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
+  mode: 'development',
   entry: './src/index.ts',
   output: {
     path: path.resolve(__dirname, 'build'),
     clean: true,
     filename: 'bundle.js',
+    publicPath: '/',
   },
   devtool: 'source-map',
   plugins: [
-    new CopyPlugin({
-      patterns: [{ from: 'public' }],
+    new MiniCssExtractPlugin({
+      filename: 'styles.css',
     }),
   ],
   resolve: {
@@ -25,18 +27,46 @@ module.exports = {
         exclude: /node_modules/,
       },
       {
-        test: /\.js$/, // Регулярное выражение для файлов, которые должны обрабатываться
-        exclude: /node_modules/, // Исключить node_modules из обработки
+        test: /\.js$/,
+        exclude: /node_modules/,
         use: {
-          loader: 'babel-loader', // Используем babel-loader
+          loader: 'babel-loader',
           options: {
-            presets: ['@babel/preset-env'], // Применяем пресет @babel/preset-env
+            presets: ['@babel/preset-env'],
           },
         },
       },
       {
         test: /\.scss$/,
-        use: ['style-loader', 'css-loader', 'sass-loader'],
+        use: [
+          MiniCssExtractPlugin.loader,
+          {
+            loader: 'css-loader',
+            options: {
+              sourceMap: true,
+            },
+          },
+          {
+            loader: 'resolve-url-loader',
+            options: {
+              sourceMap: true,
+            },
+          },
+          {
+            loader: 'sass-loader',
+            options: {
+              sourceMap: true,
+            },
+          },
+        ],
+        exclude: /node_modules/,
+      },
+      {
+        test: /\.(png|jpe?g|gif|svg)$/,
+        type: 'asset/resource',
+        generator: {
+          filename: 'images/[name][ext]',
+        },
       },
     ],
   },
