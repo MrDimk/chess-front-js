@@ -9,26 +9,18 @@ export type Position = [Row, Column];
 
 // Перечисления для типа и цвета фигуры
 export enum PieceType {
-  king,
-  queen,
-  rook,
-  bishop,
-  knight,
-  pawn,
+  king = 'king',
+  queen = 'queen',
+  rook = 'rook',
+  bishop = 'bishop',
+  knight = 'knight',
+  pawn = 'pawn',
 }
 
 export enum PieceColor {
-  white,
-  black,
+  white = 'white',
+  black = 'black'
 }
-
-// Интерфейс для шахматной фигуры
-export type Piece = {
-  type: PieceType;
-  color: PieceColor;
-  position?: string;
-  isAlive?: boolean;
-};
 
 export enum GameStatus {
   Initializing,
@@ -38,4 +30,34 @@ export enum GameStatus {
   Checkmate,
   Stalemate,
   Finished,
+}
+
+export enum GameMode {
+  Local, // two players offline
+  WithBot,
+  Online, // two players online
+  OnlineBot,
+}
+
+export enum CellStatus {
+  none,
+  active, // marks cell with active piece
+  valid, // marks cells avalible to move on
+  invalid,
+}
+
+export type Piece = {
+  color: PieceColor;
+  type: PieceType;
+  moved?: boolean;
+  isAlive?: boolean;
+  position: string;
+};
+
+export type Move = {
+  valid: boolean;
+  targetPiece: Piece | null;
+  targetPosition: string;
+  activePiece: Piece;
+  castling: {rook: Piece, targetPosition: string} | null;
 }

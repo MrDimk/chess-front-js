@@ -1,4 +1,5 @@
-import { Piece, PieceColor, PieceType } from '../../../shared/shared-types';
+import { PieceColor, PieceType } from '../../../shared/shared-types';
+import { PiecePresenter } from '../../presenter/piece-presenter/piece-presenter';
 import { AbstractView } from '../abstract-view/abstract-view';
 import './piece-view.scss';
 
@@ -139,19 +140,24 @@ const PieceSVG = {
   },
 };
 
+type PieceData = {
+  color: PieceColor,
+  type: PieceType,
+}
+
 export class PieceView extends AbstractView {
   private type: string;
   private color: string;
   // private image: string;
 
-  constructor(piece: Piece) {
+  constructor(piece: PieceData) {
     super();
     this.color = piece.color === PieceColor.white ? 'white' : 'black';
     this.type = PieceType[piece.type];
     // this.image = PieceSVG[piece.type][piece.color];
   }
 
-  getTemplate = () => `<div class="figure ${this.color}-${this.type}"></div>`;
+  getTemplate = () => `<div class="figure ${this.color} ${this.type}"></div>`;
 }
 
 // <div class="figure pawn white">

@@ -16,6 +16,7 @@ if (logContainer) {
 
 if (gameContainer) {
   const game = new GamePresenter(gameContainer);
+  game.start();
 }
 
 if (logContainer) {

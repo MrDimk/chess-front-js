@@ -3,51 +3,55 @@
   background-repeat: no-repeat;
   background-position: center;
 
-  &.white-king {
-    background-image: url(./images/pieces/white-king.svg);
+  &.white {
+    &.king {
+      background-image: url(./images/pieces/white-king.svg);
+    }
+
+    &.queen {
+      background-image: url(./images/pieces/white-queen.svg);
+    }
+
+    &.rook {
+      background-image: url(./images/pieces/white-rook.svg);
+    }
+
+    &.bishop {
+      background-image: url(./images/pieces/white-bishop.svg);
+    }
+
+    &.knight {
+      background-image: url(./images/pieces/white-knight.svg);
+    }
+
+    &.pawn {
+      background-image: url(./images/pieces/white-pawn.svg);
+    }
   }
 
-  &.black-king {
-    background-image: url(./images/pieces/black-king.svg);
-  }
+  &.black {
+    &.king {
+      background-image: url(./images/pieces/black-king.svg);
+    }
 
-  &.white-queen {
-    background-image: url(./images/pieces/white-queen.svg);
-  }
+    &.queen {
+      background-image: url(./images/pieces/black-queen.svg);
+    }
 
-  &.black-queen {
-    background-image: url(./images/pieces/black-queen.svg);
-  }
+    &.rook {
+      background-image: url(./images/pieces/black-rook.svg);
+    }
 
-  &.white-rook {
-    background-image: url(./images/pieces/white-rook.svg);
-  }
+    &.bishop {
+      background-image: url(./images/pieces/black-bishop.svg);
+    }
 
-  &.black-rook {
-    background-image: url(./images/pieces/black-rook.svg);
-  }
+    &.knight {
+      background-image: url(./images/pieces/black-knight.svg);
+    }
 
-  &.white-bishop {
-    background-image: url(./images/pieces/white-bishop.svg);
-  }
-
-  &.black-bishop {
-    background-image: url(./images/pieces/black-bishop.svg);
-  }
-
-  &.white-knight {
-    background-image: url(./images/pieces/white-knight.svg);
-  }
-
-  &.black-knight {
-    background-image: url(./images/pieces/black-knight.svg);
-  }
-
-  &.white-pawn {
-    background-image: url(./images/pieces/white-pawn.svg);
-  }
-
-  &.black-pawn {
-    background-image: url(./images/pieces/black-pawn.svg);
+    &.pawn {
+      background-image: url(./images/pieces/black-pawn.svg);
+    }
   }
 }

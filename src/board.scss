@@ -39,6 +39,20 @@
   &.column-label {
     padding-top: 5px;
   }
+
+  &.valid {
+    // border: 10px solid rgba(187, 255, 15, 0.3);
+    box-shadow: inset 0px 0px 20px rgba(187, 255, 15, 0.7);
+  }
+
+  &.active {
+    // transition: border 0.1s ease 0.1s, box-shadow 0.1s ease 0.1s; /* Задержка в 100 мс (0.1s) перед анимацией */
+    & .figure {
+      background-color: rgba(187, 255, 15, 0.5);
+      box-shadow: 2px 2px 3px rgba(51, 51, 51, 0.5);
+      transition: background-color 0.2s ease 0.1s, box-shadow 0.1s ease 0.1s; /* Задержка в 100 мс (0.1s) перед анимацией */
+    }
+  }
 }
 
 .chessboard li:nth-child(2n-1) {
@@ -59,7 +73,7 @@
 
   border-radius: 50%;
 
-  transition: background-color 0.2s ease 0.1s, box-shadow 0.1s ease 0.1s; /* Задержка в 100 мс (0.1s) перед анимацией */
+  transition: background-color 0.05s ease 0.1s, box-shadow 0.1s ease 0.1s; /* Задержка в 100 мс (0.1s) перед анимацией */
 
   &:hover {
     background-color: rgba(255, 255, 255, 0.5);

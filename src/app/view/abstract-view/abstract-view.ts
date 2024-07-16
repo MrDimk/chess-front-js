@@ -46,14 +46,14 @@ export abstract class AbstractView {
 
   /**Метод для переключения состояния путем добавления/удаления класса*/
   switchState(
-    element: HTMLElement,
     switchOn: boolean,
     additionalClass: string
   ) {
+    
     if (switchOn) {
-      element.classList.add(additionalClass);
+      this.getElement().classList.add(additionalClass);
     } else {
-      element.classList.remove(additionalClass);
+      this.getElement().classList.remove(additionalClass);
     }
   }
 }

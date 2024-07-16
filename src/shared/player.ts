@@ -5,6 +5,7 @@ export class Player {
   id: string;
   avatar: string;
   color: PieceColor;
+  didCastling: boolean;
   pieces?: Piece[];
 
   constructor(name: string, color: PieceColor) {
@@ -14,6 +15,7 @@ export class Player {
     this.avatar = 'default-avatar.png';
     this.id = crypto.randomUUID();
     this.color = color;
+    this.didCastling = false;
     localStorage.setItem(
       name,
       JSON.stringify({
